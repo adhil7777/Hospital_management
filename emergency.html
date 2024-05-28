@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>EMERGENCY PATIENT TRIAGE</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            }
+            form {
+             max-width: 500px;
+            margin: auto;
+            }
+            input[type="text"], select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+            input[type="submit"] {
+            background-color:cornflowerblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            }
+            input[type="submit"]:hover {
+            background-color:cadetblue;
+            }
+            h2 {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: black;
+                text-align: center;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>EMERGENCY PATIENT TRIAGE</h2>
+        <form action="emergency" method="post">
+            {% csrf_token %}
+            <label>PATIENT NAME</label>
+            <input type="text" name="pn">
+            <br>
+            <br>
+            <label>AGE</label>
+            <input type="number" name="ag">
+            <br>
+            <br>
+            <label>PLACE</label>
+            <input type="text" name="pl">
+            <br>
+            <br>
+            <label>CONDITION</label>
+            <select id="condition "name="cndn">
+                <option value="critical">Critical</option>
+                <option value="urgent">Urgent</option>
+                <option value="non-urgent">Non-urgent</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit"value="REGISTER">
+        </form>
+    </body>
+</html>    
+

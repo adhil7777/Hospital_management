@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>PATIENT REGISTRATION FORM</title>
+        <style>
+            body {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+        }
+        textarea {
+            height: 100px; /* Adjust textarea height as needed */
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        </style>
+    </head>
+    <body>
+        <div class = container>
+            <h2 style="font-family:serif;"> REGISTRATION </h2>
+            <form action="renewal"method="post">
+                {%csrf_token%}
+                <label>FULL NAME</label>
+                <input type="text" name="flnm">
+                <br>
+                <br>
+                <label>ADDRESS</label>
+                <input type="text" name="adrs">
+                <br>
+                <br>
+                <label>DATE OF BIRTH</label>
+                <input type="date" name="dob">
+                <br>
+                <br>
+                <label>EMAIL</label>
+                <input type="email" name="eml">
+                <br>
+                <br>
+                <label>PHONE NUMBER</label>
+                <input type="number" name="ph">
+                <br>
+                <br>
+                <label>INSURANCE PROVIDER</label>
+                <input type="text" name="ip">
+                <br>
+                <br>
+                <label>INSURANCE POLICY NUMBER</label>
+                <input type="number" name="ipn">
+                <br>
+                <br> 
+                <input type="submit" value="REGISTER">
+            </form>    
+        </div>
+    </body>
+</html>
